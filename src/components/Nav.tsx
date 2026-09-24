@@ -46,8 +46,10 @@ const Nav = () => {
             </ul>
           </div>
           <div className='flex flex-row'>
-            <Image src={logo} alt='logo'/>
-            <a className="btn btn-ghost text-xl">FITLOG</a>
+            <Link href={'/'} className='flex flex-row items-center justify-center'>
+              <Image src={logo} alt='logo'/>
+              <p className="btn btn-ghost text-xl">FITLOG</p>
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
