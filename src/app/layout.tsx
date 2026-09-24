@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Saira } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
 
 
 const geistSans = Geist({
@@ -27,11 +28,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en" data-theme="light"
+      lang="en" data-theme="dark"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
             {/* google font used*/}
-      <body className={`min-h-full flex flex-col ${saira.className}`}> 
+      <body className={`min-h-full flex flex-col`}> 
+        <Nav/>
           {children}
       </body>
     </html>
