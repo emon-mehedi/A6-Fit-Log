@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Saira } from "next/font/google";
+import { Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import ItemsProvider from "@/contexts/context";
 
 
 const geistSans = Geist({
@@ -10,11 +11,6 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-//Google font imported
-const saira= Saira({
-  subsets: ["latin"],
-  display: 'swap'
-})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -35,7 +31,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {/* google font used*/}
       <body className={`min-h-full flex flex-col`}> 
         <Nav/>
+        <ItemsProvider>
           {children}
+        </ItemsProvider>
         <Footer/>
       </body>
     </html>
