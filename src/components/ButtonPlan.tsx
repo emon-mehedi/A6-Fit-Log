@@ -5,22 +5,24 @@ import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
 
-const ButtonPlan = ({item}:{item:IItemType}) => {
-const {todaysPlan, setTodaysPlan}=useContext(ItemsContext)
-const handlePlan=(item:IItemType)=>{
-    const exists = todaysPlan.find(each=>each.id===item.id);
-    if (exists){
+const ButtonPlan = ({ item }: { item: IItemType }) => {
+  const { todaysPlan, setTodaysPlan } = useContext(ItemsContext)
+  const handlePlan = (item: IItemType) => {
+    const exists = todaysPlan.find(each => each.id === item.id);
+    if (exists) {
       toast.error("Already exists in todays plan");
       return
-    } else {
+    } else if (todaysPlan.length < 5) {
       setTodaysPlan([...todaysPlan, item]);
-      toast.success("Added to todays plan")
+      toast.success("Added to saved list")
+    } else {
+      toast.error("List if full, finish to add more")
     }
   }
 
 
   return (
-    <button className='text-black bg-[#d0fd42] py-2 px-4' onClick={()=>handlePlan(item)}>
+    <button className='text-black bg-[#d0fd42] py-2 px-4' onClick={() => handlePlan(item)}>
       Add to todays plan
     </button>
   );

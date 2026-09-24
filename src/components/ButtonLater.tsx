@@ -12,9 +12,11 @@ const ButtonLater = ({item}:{item:IItemType}) => {
     if(exists){
       toast.error("Already exists in saved list");
       return
-    } else {
+    } else if(saved.length<5){
       setSaved([...saved,item]);
       toast.success("Added to saved list")
+    } else {
+      toast.error("List if full, finish to add more")
     }
   }
   return (
