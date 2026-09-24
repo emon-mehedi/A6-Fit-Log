@@ -4,7 +4,7 @@ import { IItemType } from "@/types/AllTypes";
 import Card from "@/components/Card";
 
 
-const logItemsPromise = async () => {
+export const logItemsPromise = async () => {
   try {
     const res = await fetch('https://api.abcz.workers.dev/api/fitlog');
     return res.json()
