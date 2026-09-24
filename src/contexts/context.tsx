@@ -1,12 +1,12 @@
+'use client'
 import { IItemType } from "@/types/AllTypes";
-import { createContext, ReactNode, SetStateAction, useState } from "react";
+import React, { createContext, ReactNode, SetStateAction, useState } from "react";
 
-import React from 'react';
 
 interface IItemsContextType {
-  todaysPlan: [];
+  todaysPlan: IItemType[];
   setTodaysPlan: React.Dispatch<SetStateAction<IItemType[]>>;
-  saved: [];
+  saved: IItemType[];
   setSaved: React.Dispatch<SetStateAction<IItemType[]>>
 }
 
@@ -18,8 +18,8 @@ export const ItemsContext = createContext<IItemsContextType>({
 });
 
 const ItemsProvider = ({children}:{children:ReactNode}) => {
-  const [todaysPlan, setTodaysPlan] = useState([]);
-  const [saved, setSaved] = useState([]);
+  const [todaysPlan, setTodaysPlan] = useState<IItemType[]>([]);
+  const [saved, setSaved] = useState<IItemType[]>([]);
 
   const sharedData: IItemsContextType = {
     todaysPlan, setTodaysPlan, saved, setSaved
