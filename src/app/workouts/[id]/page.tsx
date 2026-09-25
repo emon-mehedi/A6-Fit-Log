@@ -30,7 +30,7 @@ const ItemDetails = async({ params }: IItemDetailsType) => {
           <h2 className='text-3xl font-bold'>{(item.name).toUpperCase()}</h2>
           <p>{item.description}</p>
           <div className='flex flex-row gap-3'>
-            {item.muscleGroups.map((muscle, index) => <p className='px-3 text-black text-sm bg-[#ccff00] rounded-2xl' key={index}>{muscle}</p>)}
+            {item.muscleGroups.map((muscle, index) => <p className='px-3 text-black text-sm bg-primary rounded-2xl' key={index}>{muscle}</p>)}
           </div>
           <div className=' border-gray-600 bg-base-100 rounded-xl p-3 space-y-4'>
             <div className='grid grid-cols-2'>

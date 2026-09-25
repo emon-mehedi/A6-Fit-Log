@@ -30,15 +30,15 @@ const SaveCard = ({item}:{item:IItemType}) => {
           <p className='text-xs'>{item.equipment}</p>
           <div className='flex flex-row gap-4 mt-2'>
             <div className='flex flex-row items-center space-x-1'>
-              <FaRegClock color='#ccff00'/>
+              <FaRegClock color='primary'/>
               <p className='text-sm'>{item.duration}</p>
             </div>
             <div className='flex flex-row items-center space-x-1'>
-              <LuFlame color='#ccff00'/>
+              <LuFlame color='primary'/>
               <p className='text-sm'>{item.caloriesBurned}</p>
             </div>
             <div className='flex flex-row items-center space-x-1'>
-              <FaRegStar color='#ccff00'/>
+              <FaRegStar color='primary'/>
               <p className='text-sm'>{item.rating}</p>
             </div>
           </div>
@@ -47,7 +47,7 @@ const SaveCard = ({item}:{item:IItemType}) => {
 
       <div className='flex flex-row gap-2'>
         <Link href={`/workouts/${item.id}`}><button className='text-xs py-1 px-3 border border-white rounded-2xl'>View Details</button></Link>
-        <button onClick={()=>markDone(item)} className='flex flex-row gap-1 items-center text-xs py-1 px-3 border bg-[#ccff00] text-black rounded-2xl'><IoMdCheckmark /><span>Mark as Done</span></button>
+        <button onClick={()=>markDone(item)} className='flex flex-row gap-1 items-center text-xs py-1 px-3 border bg-primary text-black rounded-2xl'><IoMdCheckmark /><span>Mark as Done</span></button>
         <button onClick={()=>removeItem(item)}><RxCross1 /></button>
       </div>
     </div>

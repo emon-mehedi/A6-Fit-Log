@@ -4,11 +4,15 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --primaryGreen: #ccff00;
+  --secondaryGray:#9fa2ae;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primaryGreen);
+  --color-secondary: var(--secondaryGray);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-oswald: var(--oswald-font);
