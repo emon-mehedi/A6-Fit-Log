@@ -2,6 +2,7 @@
 import { ItemsContext } from '@/contexts/context';
 import { IItemType } from '@/types/AllTypes';
 import React, { useContext } from 'react';
+import { IoBookmarkOutline } from 'react-icons/io5';
 import { toast } from 'react-toastify';
 
 const ButtonLater = ({item}:{item:IItemType}) => {
@@ -20,8 +21,7 @@ const ButtonLater = ({item}:{item:IItemType}) => {
     }
   }
   return (
-    <button className='py-2 px-4 border' onClick={()=>handleSave(item)}>
-      Save for later
+    <button className='flex flex-row gap-2 items-center rounded-2xl text-sm border py-2 px-4' onClick={()=>handleSave(item)}><IoBookmarkOutline /><span>Save for later</span>
     </button>
   );
 };

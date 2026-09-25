@@ -2,6 +2,7 @@
 import { ItemsContext } from '@/contexts/context';
 import { IItemType } from '@/types/AllTypes';
 import React, { useContext } from 'react';
+import { MdAddCard } from 'react-icons/md';
 import { toast } from 'react-toastify';
 
 
@@ -22,8 +23,8 @@ const ButtonPlan = ({ item }: { item: IItemType }) => {
 
 
   return (
-    <button className='text-black bg-[#d0fd42] py-2 px-4' onClick={() => handlePlan(item)}>
-      Add to todays plan
+    <button className='flex flex-row gap-2 items-center rounded-2xl text-sm text-black bg-[#d0fd42] py-2 px-4' onClick={() => handlePlan(item)}>
+      <MdAddCard /><span>Add to todays plan</span>
     </button>
   );
 };

@@ -31,24 +31,24 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
             {/* google font used*/}
       <body className={`min-h-full flex flex-col`}> 
-        <Nav/>
-        <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick={false}
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="light"
-            transition={Bounce}
-          />
         <ItemsProvider>
+          <Nav/>
           {children}
         </ItemsProvider>
         <Footer/>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
+        />
       </body>
     </html>
   );

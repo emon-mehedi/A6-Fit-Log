@@ -25,7 +25,7 @@ const ItemDetails = async({ params }: IItemDetailsType) => {
 
     return (
       <div className='grid grid-cols-1 md:grid-cols-2 gap-5 container mx-auto'>
-        <Image className='w-full rounded-2xl' src={item.image} height={500} width={400} alt='Item photo' />
+        <Image className='w-full h-full object-cover rounded-2xl' src={item.image} height={500} width={400} alt='Item photo' />
         <div className='space-y-3'>
           <h2 className='text-3xl font-bold'>{(item.name).toUpperCase()}</h2>
           <p>{item.description}</p>
@@ -62,7 +62,7 @@ const ItemDetails = async({ params }: IItemDetailsType) => {
               <p>{item.rating}</p>
             </div>
           </div>
-          <div>
+          <div className='space-y-4'>
             <h3 className='text-2xl'>INSTRUCTIONS</h3>
             <div className='text-sm space-y-2'>
               {
@@ -70,7 +70,7 @@ const ItemDetails = async({ params }: IItemDetailsType) => {
               }
             </div>
           </div>
-          <div>
+          <div className='flex flex-row gap-2'>
             <ButtonPlan item={item}/>
             <ButtonLater item={item}/>
           </div>
