@@ -13,7 +13,7 @@ const Card = ({ item }: ICardType) => {
         <Image className='w-full h-50 object-cover rounded-t-2xl' src={item.image} width={500} height={300} alt='Item image' />
         <div className='space-y-2 p-5'>
           <div className='flex flex-row gap-2'>
-            {item.muscleGroups.map((muscle, index) => <p className='px-3 text-black bg-[#d0fd42] rounded-2xl' key={index}>{muscle}</p>)}
+            {item.muscleGroups.map((muscle, index) => <p className='px-3 text-black bg-[#ccff00] rounded-2xl' key={index}>{muscle}</p>)}
           </div>
           <h2 className='text-xl'>{(item.name).toUpperCase()}</h2>
           <p>{item.equipment}</p>

@@ -2,6 +2,7 @@
 import PlanCard from '@/components/PlanCard';
 import SaveCard from '@/components/SaveCard';
 import { ItemsContext } from '@/contexts/context';
+import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 const MyPlan = () => {
 
@@ -16,7 +17,7 @@ const MyPlan = () => {
         <div className='grid grid-cols-3 bg-base-200 p-3'>
           <div className='flex flex-col'>
             <p className='text-xs'>Exercises</p>
-            <h2 className='text-[#d0fd42] text-3xl'>{tab === "plan" ? todaysPlan.length : saved.length}</h2>
+            <h2 className='text-[#ccff00] text-3xl'>{tab === "plan" ? todaysPlan.length : saved.length}</h2>
           </div>
           <div className='flex flex-col'>
             <p className='text-xs'>Minutes</p>
@@ -32,8 +33,8 @@ const MyPlan = () => {
 
       <div className='flex flex-row justify-between items-center'>
         <div className='space-x-3 bg-base-200 rounded-2xl p-1'>
-          <button onClick={() => setTab("plan")} className={`${tab === "plan" ? "text-[#d0fd42] bg-black rounded-l-2xl" : ""} py-2 px-4`}>Todays Plan</button>
-          <button onClick={() => setTab("saved")} className={`${tab === "saved" ? "text-[#d0fd42] bg-black rounded-r-2xl" : ""} py-2 px-4`}>Saved</button>
+          <button onClick={() => setTab("plan")} className={`${tab === "plan" ? "text-[#ccff00] bg-black rounded-l-2xl" : ""} py-2 px-4`}>Todays Plan</button>
+          <button onClick={() => setTab("saved")} className={`${tab === "saved" ? "text-[#ccff00] bg-black rounded-r-2xl" : ""} py-2 px-4`}>Saved</button>
         </div>
         <div>
           <p>Sort by</p>
@@ -49,11 +50,19 @@ const MyPlan = () => {
         {
           tab==="plan"
           ? todaysPlan.length===0
-            ?<h1 className='text-4xl text-center mt-50'>List is empty</h1>
+            ?<div className='flex flex-col justify-center items-center mt-20 space-y-2'>
+              <h1 className='text-4xl'>Nothing here yet</h1>
+              <p>Browse the library and add a lift to get today moving.</p>
+              <Link href={'/'} className='bg-[#ccff00] py-2 px-7 mt-5 rounded-2xl text-black'>Go to workouts</Link>
+            </div>
             :todaysPlan.map(item=><PlanCard key={item.id} item={item}/>)
           
           : saved.length===0
-            ?<h1 className='text-4xl text-center mt-50'>List is empty</h1>
+            ?<div className='flex flex-col justify-center items-center mt-20 space-y-2'>
+              <h1 className='text-4xl'>Nothing here yet</h1>
+              <p>Browse the library and add a lift to get today moving.</p>
+              <Link href={'/'} className='bg-[#ccff00] py-2 px-7 mt-5 rounded-2xl text-black'>Go to workouts</Link>
+            </div>
             :saved.map(item=><SaveCard key={item.id} item={item}/>)
         }
       </div>

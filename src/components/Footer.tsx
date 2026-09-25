@@ -10,7 +10,7 @@ const Footer = () => {
           <Image src={logo} alt='logo' className='h-5'/>
           <p>FITLOG</p>
         </div>
-        <p>2026 FitLog - Workout Library. Train hard, log honest.</p>
+        <p>© 2026 FitLog - Workout Library. Train hard, log honest.</p>
       </div>
     </footer>
   );

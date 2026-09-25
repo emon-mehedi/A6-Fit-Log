@@ -30,7 +30,7 @@ const ItemDetails = async({ params }: IItemDetailsType) => {
           <h2 className='text-3xl font-bold'>{(item.name).toUpperCase()}</h2>
           <p>{item.description}</p>
           <div className='flex flex-row gap-3'>
-            {item.muscleGroups.map((muscle, index) => <p className='px-3 text-black text-sm bg-[#d0fd42] rounded-2xl' key={index}>{muscle}</p>)}
+            {item.muscleGroups.map((muscle, index) => <p className='px-3 text-black text-sm bg-[#ccff00] rounded-2xl' key={index}>{muscle}</p>)}
           </div>
           <div className=' border-gray-600 bg-base-100 rounded-xl p-3 space-y-4'>
             <div className='grid grid-cols-2'>
@@ -64,11 +64,11 @@ const ItemDetails = async({ params }: IItemDetailsType) => {
           </div>
           <div className='space-y-4'>
             <h3 className='text-2xl'>INSTRUCTIONS</h3>
-            <div className='text-sm space-y-2'>
+            <ol className='list-decimal text-sm space-y-2 pl-8'>
               {
-                item.instructions.map((each, index) =><p key={index}>{index+1}. {each}</p>)
+                item.instructions.map((each,index) =><li key={index}>{each}</li>)
               }
-            </div>
+            </ol>
           </div>
           <div className='flex flex-row gap-2'>
             <ButtonPlan item={item}/>

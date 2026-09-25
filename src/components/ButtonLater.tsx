@@ -15,7 +15,7 @@ const ButtonLater = ({item}:{item:IItemType}) => {
       return
     } else if(saved.length<5){
       setSaved([...saved,item]);
-      toast.success("Added to saved list")
+      toast.success("Saved for later")
     } else {
       toast.error("List if full, finish to add more")
     }

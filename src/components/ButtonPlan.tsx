@@ -15,7 +15,7 @@ const ButtonPlan = ({ item }: { item: IItemType }) => {
       return
     } else if (todaysPlan.length < 5) {
       setTodaysPlan([...todaysPlan, item]);
-      toast.success("Added to saved list")
+      toast.success("Added to todays plan")
     } else {
       toast.error("List if full, finish to add more")
     }
@@ -23,7 +23,7 @@ const ButtonPlan = ({ item }: { item: IItemType }) => {
 
 
   return (
-    <button className='flex flex-row gap-2 items-center rounded-2xl text-sm text-black bg-[#d0fd42] py-2 px-4' onClick={() => handlePlan(item)}>
+    <button className='flex flex-row gap-2 items-center rounded-2xl text-sm text-black bg-[#ccff00] py-2 px-4' onClick={() => handlePlan(item)}>
       <MdAddCard /><span>Add to todays plan</span>
     </button>
   );
