@@ -38,14 +38,14 @@ const Nav = () => {
           </ul>
         </div>
         
-        <div className="navbar-end bg-black">
-          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn px-1 md:px-4 text-xs md:text-sm">
+        <div className="navbar-end">
+          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="px-1 text-xs md:text-sm space-x-1">
             <span>Plan</span>
-            <span className='bg-primary px-3 rounded-xl text-black'>{todaysPlan.length}</span>
+            <span className='bg-primary py-1 px-2 rounded-xl text-black'>{todaysPlan.length}</span>
           </Link>
-          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn px-1 md:px-4 text-xs md:text-sm">
+          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="px-1 text-xs md:text-sm  space-x-1">
             <span>Saved</span>
-            <span className='border py-1 px-3 rounded-xl'>{saved.length}</span>
+            <span className='border py-1 px-2 rounded-xl'>{saved.length}</span>
           </Link>
         </div>
 
