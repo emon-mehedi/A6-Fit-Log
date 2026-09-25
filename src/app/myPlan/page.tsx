@@ -53,7 +53,7 @@ const MyPlan = () => {
           <button onClick={() => setTab("plan")} className={`${tab === "plan" ? "text-primary bg-black rounded-l-2xl" : "text-secondary"} text-sm md:text-md py-2 px-4`}>Todays Plan</button>
           <button onClick={() => setTab("saved")} className={`${tab === "saved" ? "text-primary bg-black rounded-r-2xl" : "text-secondary"} text-sm md:text-md py-2 px-4`}>Saved</button>
         </div>
-        <div className='flex flex-row justify-center items-center gap-2'>
+        <div className='flex flex-row justify-center items-center gap-2 mt-3 md:mt-0'>
           <p className='text-xs md:text-sm text-secondary'>Sort by</p>
           <div>
             <select defaultValue="rating" onChange={(e) => { setSortBy(e.target.value as "duration" | "calories" | "rating") }} className="select rounded-2xl">
