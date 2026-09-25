@@ -10,8 +10,8 @@ const Nav = () => {
   const { todaysPlan, saved } = useContext(ItemsContext);
   const [tab, setTab] = useState<"workouts" | "myPlan">("workouts")
   return (
-    <div className='flex flex-row justify-center'>
-      <div className="navbar shadow-sm container mx-auto bg-black sticky z-10">
+    <div className='flex flex-row justify-center sticky top-0 z-10'>
+      <div className="navbar shadow-sm container mx-auto bg-black">
         <div className="navbar-start lg:hidden">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,7 +38,7 @@ const Nav = () => {
           </ul>
         </div>
         
-        <div className="navbar-end">
+        <div className="navbar-end bg-black">
           <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn px-1 md:px-4 text-xs md:text-sm">
             <span>Plan</span>
             <span className='bg-primary px-3 rounded-xl text-black'>{todaysPlan.length}</span>
