@@ -10,8 +10,8 @@ const Nav = () => {
   const { todaysPlan, saved } = useContext(ItemsContext);
   const [tab, setTab] = useState<"workouts" | "myPlan">("workouts")
   return (
-    <div>
-      <div className="navbar shadow-sm container mx-auto">
+    <div className='flex flex-row justify-center'>
+      <div className="navbar shadow-sm container mx-auto bg-black sticky z-10">
         <div className="navbar-start lg:hidden">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,10 +37,18 @@ const Nav = () => {
             <Link href={'/myPlan'}><li onClick={() => setTab("myPlan")} className={`${tab === "myPlan" ? "text-primary" : "text-secondary"}`}>My Plan</li></Link>
           </ul>
         </div>
+        
         <div className="navbar-end">
-          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn"><span>Plan</span><span className='bg-primary py-1 px-3 rounded-xl text-black'>{todaysPlan.length}</span></Link>
-          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn"><span>Saved</span><span className='border py-1 px-3 rounded-xl'>{saved.length}</span></Link>
+          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn px-1 md:px-4 text-xs md:text-sm">
+            <span>Plan</span>
+            <span className='bg-primary px-3 rounded-xl text-black'>{todaysPlan.length}</span>
+          </Link>
+          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn px-1 md:px-4 text-xs md:text-sm">
+            <span>Saved</span>
+            <span className='border py-1 px-3 rounded-xl'>{saved.length}</span>
+          </Link>
         </div>
+
       </div>
     </div>
   )

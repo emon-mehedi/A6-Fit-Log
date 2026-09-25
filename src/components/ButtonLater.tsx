@@ -21,7 +21,7 @@ const ButtonLater = ({item}:{item:IItemType}) => {
     }
   }
   return (
-    <button className='flex flex-row gap-2 items-center rounded-2xl text-sm border py-2 px-4' onClick={()=>handleSave(item)}><IoBookmarkOutline /><span>Save for later</span>
+    <button className='flex flex-row gap-2 items-center rounded-2xl text-xs md:text-sm border py-1 md:py-2 px-2 md:px-4' onClick={()=>handleSave(item)}><IoBookmarkOutline /><span>Save for later</span>
     </button>
   );
 };

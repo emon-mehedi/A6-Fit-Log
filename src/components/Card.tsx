@@ -15,7 +15,7 @@ const Card = ({ item }: ICardType) => {
         <Image className='w-full h-50 object-cover rounded-t-2xl' src={item.image} width={500} height={300} alt='Item image' />
         <div className='space-y-2 p-5'>
           <div className='flex flex-row gap-2 text-sm font-bold uppercase'>
-            {item.muscleGroups.map((muscle, index) => <p className='px-3 py-1 text-black bg-primary rounded-2xl' key={index}>{muscle}</p>)}
+            {item.muscleGroups.map((muscle, index) => <p className='px-3 py-1 text-black text-xs bg-primary rounded-2xl' key={index}>{muscle}</p>)}
           </div>
           <h2 className='text-xl font-oswald font-bold'>{(item.name).toUpperCase()}</h2>
           <p className='text-secondary text-sm'>{item.equipment}</p>

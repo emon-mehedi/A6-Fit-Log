@@ -22,11 +22,11 @@ const SaveCard = ({item}:{item:IItemType}) => {
     toast.success("Removed successfuly")
   }
   return (
-    <div className='flex flex-row justify-between items-center bg-base-200'>
-      <div className='flex flex-row gap-4'>
+    <div className='flex flex-col md:flex-row justify-between items-center bg-base-200'>
+      <div className='flex flex-row gap-4 w-full'>
         <Image src={item.image} alt='workout photo' width={150} height={100} className='h-25 object-cover rounded-2xl'/>
         <div className='flex flex-col justify-center'>
-          <h1 className='uppercase text-2xl'>{item.name}</h1>
+          <h1 className='uppercase text-xl md:text-2xl'>{item.name}</h1>
           <p className='text-xs'>{item.equipment}</p>
           <div className='flex flex-row gap-4 mt-2'>
             <div className='flex flex-row items-center space-x-1'>
@@ -45,7 +45,7 @@ const SaveCard = ({item}:{item:IItemType}) => {
         </div>
       </div>
 
-      <div className='flex flex-row gap-2'>
+      <div className='flex flex-row gap-2 my-5 md:my-0'>
         <Link href={`/workouts/${item.id}`}><button className='text-xs py-1 px-3 border border-white rounded-2xl'>View Details</button></Link>
         <button onClick={()=>markDone(item)} className='flex flex-row gap-1 items-center text-xs py-1 px-3 border bg-primary text-black rounded-2xl'><IoMdCheckmark /><span>Mark as Done</span></button>
         <button onClick={()=>removeItem(item)}><RxCross1 /></button>

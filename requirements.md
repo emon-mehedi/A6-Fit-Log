@@ -3,18 +3,9 @@
 Details/Single Data:
 https://api.abcz.workers.dev/api/fitlog/:id
 
---- 
-
-## 🐣 Basic Requirements (Must Do for Everyone)
-- Your app must work on all screen sizes — mobile, tablet, and desktop
-- Add a nice README.md file with your project name, description, technologies used, and features(minimum 5)
-
---- 
 
 
 # 🔧 Main Requirements — 50 Marks
-
-
 
 ### 6. My Plan Page (`/my-plan`) — the "log" page
 - **Loading state**: show "Loading workouts…" while fetching before the list renders.
@@ -51,4 +42,3 @@ https://api.abcz.workers.dev/api/fitlog/:id
 ## Optional (No Marks — Highly Recommended)
 - Persist the plan/saved data in `localStorage` so it survives a page reload.
 - Search the My Plan / library entries by workout name or tag.
-- Disable "Add to today's plan" when the plan already contains 5 lifts (the cap mentioned in the subtitle).
