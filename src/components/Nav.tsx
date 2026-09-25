@@ -32,7 +32,7 @@ const Nav = () => {
             </Link>
           </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-4">
+          <ul className="menu menu-horizontal px-1 space-x-4 ">
             <Link href={'/'}><li onClick={() => setTab("workouts")} className={`${tab === "workouts" ? "text-primary" : "text-secondary"}`}>Workouts</li></Link>
             <Link href={'/myPlan'}><li onClick={() => setTab("myPlan")} className={`${tab === "myPlan" ? "text-primary" : "text-secondary"}`}>My Plan</li></Link>
           </ul>

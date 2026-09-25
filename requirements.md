@@ -13,16 +13,12 @@ https://api.abcz.workers.dev/api/fitlog/:id
 
 
 # 🔧 Main Requirements — 50 Marks
-### 1. 🔝 Navbar
 
-- Design the Navbar exactly like the Figma design
 
 
 ### 6. My Plan Page (`/my-plan`) — the "log" page
 - **Loading state**: show "Loading workouts…" while fetching before the list renders.
 
-### 7. Footer
-- Match the Figma design: dark footer.
 
 ### 8. Responsive Design
 - The entire website must work correctly on mobile, tablet, and desktop screen sizes (grid collapses correctly, navbar stays usable, hero stacks, etc.).

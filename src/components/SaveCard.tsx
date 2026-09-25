@@ -30,15 +30,15 @@ const SaveCard = ({item}:{item:IItemType}) => {
           <p className='text-xs'>{item.equipment}</p>
           <div className='flex flex-row gap-4 mt-2'>
             <div className='flex flex-row items-center space-x-1'>
-              <FaRegClock color='primary'/>
+              <FaRegClock color='#ccff00'/>
               <p className='text-sm'>{item.duration}</p>
             </div>
             <div className='flex flex-row items-center space-x-1'>
-              <LuFlame color='primary'/>
+              <LuFlame color='#ccff00'/>
               <p className='text-sm'>{item.caloriesBurned}</p>
             </div>
             <div className='flex flex-row items-center space-x-1'>
-              <FaRegStar color='primary'/>
+              <FaRegStar color='#ccff00'/>
               <p className='text-sm'>{item.rating}</p>
             </div>
           </div>
