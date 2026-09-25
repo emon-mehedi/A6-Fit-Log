@@ -23,7 +23,7 @@ const PlanCard = ({item}:{item:IItemType}) => {
   }
   return (
     <div className='flex flex-col md:flex-row justify-between items-center bg-base-200 '>
-      <div className='flex flex-row gap-4 w-full'>
+      <div className='flex flex-row gap-4 w-full md:w-auto'>
         <Image src={item.image} alt='workout photo' width={150} height={100} className='h-25 object-cover rounded-2xl'/>
         <div className='flex flex-col justify-center'>
           <h1 className='uppercase text-xl md:text-2xl'>{item.name}</h1>

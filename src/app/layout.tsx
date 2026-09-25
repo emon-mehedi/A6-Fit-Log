@@ -27,7 +27,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className={`min-h-full flex flex-col font-arial`}> 
         <ItemsProvider>
           <Nav/>
-          {children}
+          <main className="flex-1">
+            {children}
+          </main>
         </ItemsProvider>
         <Footer/>
         <ToastContainer
