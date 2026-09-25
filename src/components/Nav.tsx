@@ -20,7 +20,7 @@ const Nav = () => {
             <ul
               tabIndex={-1}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-3">
-              <Link href={'/'}><li onClick={(e) => {setTab("workouts");}} className={`${tab === "workouts" ? "text-[#d0fd42]" : ""}`}>Workouts</li></Link>
+              <Link href={'/'}><li onClick={() => setTab("workouts")} className={`${tab === "workouts" ? "text-[#d0fd42]" : ""}`}>Workouts</li></Link>
               <Link href={'/myPlan'}><li onClick={() => setTab("myPlan")} className={`${tab === "myPlan" ? "text-[#d0fd42]" : ""}`}>My Plan</li></Link>
             </ul>
           </div>
@@ -38,8 +38,8 @@ const Nav = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link href={'/myPlan'} className="btn"><span>Plan</span><span className='bg-[#d0fd42] py-1 px-3 rounded-xl text-black'>{todaysPlan.length}</span></Link>
-          <Link href={'/myPlan'} className="btn"><span>Saved</span><span className='border py-1 px-3 rounded-xl'>{saved.length}</span></Link>
+          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn"><span>Plan</span><span className='bg-[#d0fd42] py-1 px-3 rounded-xl text-black'>{todaysPlan.length}</span></Link>
+          <Link href={'/myPlan'} onClick={() => setTab("myPlan")} className="btn"><span>Saved</span><span className='border py-1 px-3 rounded-xl'>{saved.length}</span></Link>
         </div>
       </div>
     </div>
